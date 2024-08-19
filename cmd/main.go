@@ -1,6 +1,8 @@
 package main
 
 import (
+	"api_consulta_dados/controller"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -12,6 +14,8 @@ func main() {
 			"Message": "Hello World",
 		})
 	})
+
+	r.GET("/cpf", controller.ConsultCpf)
 
 	r.Run(":8080")
 }
